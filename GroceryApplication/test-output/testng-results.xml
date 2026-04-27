@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-27T14:56:30 CEST" name="Suite" finished-at="2026-04-27T14:56:38 CEST" duration-ms="8647">
+  <suite started-at="2026-04-27T16:56:14 CEST" name="Suite" finished-at="2026-04-27T16:56:23 CEST" duration-ms="9222">
     <groups>
     </groups>
-    <test started-at="2026-04-27T14:56:30 CEST" name="Test" finished-at="2026-04-27T14:56:38 CEST" duration-ms="8647">
-      <class name="testScript.ManageFooterTest">
-        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:testScript.ManageFooterTest@62379589]" started-at="2026-04-27T14:56:30 CEST" name="browserInitialisation" finished-at="2026-04-27T14:56:33 CEST" duration-ms="3268" status="PASS">
+    <test started-at="2026-04-27T16:56:14 CEST" name="Test" finished-at="2026-04-27T16:56:23 CEST" duration-ms="9222">
+      <class name="testScript.ManageContactTest">
+        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:testScript.ManageContactTest@62379589]" started-at="2026-04-27T16:56:14 CEST" name="browserInitialisation" finished-at="2026-04-27T16:56:17 CEST" duration-ms="3264" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="verifyAdminIsAbleToAddFooter()[pri:0, instance:testScript.ManageFooterTest@62379589]" started-at="2026-04-27T14:56:33 CEST" name="verifyAdminIsAbleToAddFooter" finished-at="2026-04-27T14:56:38 CEST" duration-ms="5339" status="PASS">
+        <test-method signature="verifyAdminIsAbleToAddContact()[pri:0, instance:testScript.ManageContactTest@62379589]" started-at="2026-04-27T16:56:17 CEST" name="verifyAdminIsAbleToAddContact" finished-at="2026-04-27T16:56:23 CEST" duration-ms="5915" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdminIsAbleToAddFooter -->
-      </class> <!-- testScript.ManageFooterTest -->
+        </test-method> <!-- verifyAdminIsAbleToAddContact -->
+      </class> <!-- testScript.ManageContactTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

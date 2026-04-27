@@ -6,6 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageContactPage {
 	
 	@FindBy(xpath="(//a[@class='small-box-footer']//following::i[@class='fas fa-arrow-circle-right'])[3]")WebElement manageContactMoreInfoButton;
@@ -27,6 +29,7 @@ public class ManageContactPage {
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertMsg;
 	
 	public WebDriver driver;
+	PageUtility pageutility = new PageUtility();
 	
 	public ManageContactPage(WebDriver driver)
 	{
@@ -95,9 +98,11 @@ public class ManageContactPage {
 	public void clickUpdateButton()
 	{
 		//As the click() method is not working, we need to use ActionClass to perform the click operation.
-		Actions actions = new Actions(driver);
-		actions.moveToElement(updateButton).pause(500).click().perform(); 
-//		updateButton.click();
+//		Actions actions = new Actions(driver);
+//		actions.moveToElement(updateButton).pause(500).click().perform(); 
+		
+	
+		pageutility.singleClick(driver, updateButton);
 		
 		
 	}

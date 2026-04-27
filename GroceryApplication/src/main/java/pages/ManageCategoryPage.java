@@ -6,6 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageCategoryPage {
 
 	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::a[@class='small-box-footer'])[9]")WebElement manageCategoryMoreInfoButton;
@@ -24,6 +26,7 @@ public class ManageCategoryPage {
 	
 	
 	public WebDriver driver;
+	PageUtility pageutility = new PageUtility();
 	
 	public ManageCategoryPage(WebDriver driver)
 	{
@@ -70,9 +73,12 @@ public class ManageCategoryPage {
 	
 	public void clickOnSaveButton()
 	{
-		Actions actions = new Actions(driver);
+//		Actions actions = new Actions(driver);
+//		
+//		actions.moveToElement(saveButton).pause(500).click().perform();
 		
-		actions.moveToElement(saveButton).pause(500).click().perform();
+
+		pageutility.singleClick(driver, saveButton);
 		
 	}
 	
