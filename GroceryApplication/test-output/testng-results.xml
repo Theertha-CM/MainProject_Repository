@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-27T16:56:14 CEST" name="Suite" finished-at="2026-04-27T16:56:23 CEST" duration-ms="9222">
+  <suite started-at="2026-04-27T17:08:22 CEST" name="Suite" finished-at="2026-04-27T17:08:28 CEST" duration-ms="6675">
     <groups>
     </groups>
-    <test started-at="2026-04-27T16:56:14 CEST" name="Test" finished-at="2026-04-27T16:56:23 CEST" duration-ms="9222">
-      <class name="testScript.ManageContactTest">
-        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:testScript.ManageContactTest@62379589]" started-at="2026-04-27T16:56:14 CEST" name="browserInitialisation" finished-at="2026-04-27T16:56:17 CEST" duration-ms="3264" status="PASS">
+    <test started-at="2026-04-27T17:08:22 CEST" name="Test" finished-at="2026-04-27T17:08:28 CEST" duration-ms="6675">
+      <class name="testScript.LogOutTest">
+        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:testScript.LogOutTest@62379589]" started-at="2026-04-27T17:08:22 CEST" name="browserInitialisation" finished-at="2026-04-27T17:08:25 CEST" duration-ms="3057" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="verifyAdminIsAbleToAddContact()[pri:0, instance:testScript.ManageContactTest@62379589]" started-at="2026-04-27T16:56:17 CEST" name="verifyAdminIsAbleToAddContact" finished-at="2026-04-27T16:56:23 CEST" duration-ms="5915" status="PASS">
+        <test-method signature="verifyTheUserIsAbletoLoginWithValidCredentials()[pri:1, instance:testScript.LogOutTest@62379589]" started-at="2026-04-27T17:08:25 CEST" name="verifyTheUserIsAbletoLoginWithValidCredentials" finished-at="2026-04-27T17:08:28 CEST" duration-ms="3570" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdminIsAbleToAddContact -->
-      </class> <!-- testScript.ManageContactTest -->
+        </test-method> <!-- verifyTheUserIsAbletoLoginWithValidCredentials -->
+      </class> <!-- testScript.LogOutTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

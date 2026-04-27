@@ -12,7 +12,7 @@ import utilities.FakerUtility;
 
 public class ManageFooterTest extends Base {
 	
-	@Test(retryAnalyzer = retry.Retry.class)
+	@Test(retryAnalyzer = retry.Retry.class , description="Manage Footer Test Case")
 	public void verifyAdminIsAbleToAddFooter() throws IOException
 	{
 		

@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
 
-	@Test(description="Test Case")
+	@Test(description="Manage News Test Case")
 	public void verifyTheAdminIsAbleToAddNews() throws IOException
 	{
 		String usernameValue = ExcelUtility.getStringData(1, 0, "loginpage"); //Fetching username from the excel file from the sheet loginpage

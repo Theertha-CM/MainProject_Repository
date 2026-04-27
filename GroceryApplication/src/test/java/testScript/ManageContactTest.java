@@ -12,7 +12,7 @@ import utilities.FakerUtility;
 
 public class ManageContactTest extends Base {
 	
-	@Test(retryAnalyzer = retry.Retry.class)
+	@Test(retryAnalyzer = retry.Retry.class , description="Manage Contact Test Case")
 	public void verifyAdminIsAbleToAddContact() throws IOException
 	{
 		String usernameValue = ExcelUtility.getStringData(1, 0, "loginpage"); //Fetching username from the excel file from the sheet loginpage

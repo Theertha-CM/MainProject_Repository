@@ -2,6 +2,7 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.LogOutPage;
@@ -10,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class LogOutTest extends Base {
 	
-	@Test(priority=1)
+	@Test(priority=1 , description="LogOut Test Case")
 	public void verifyTheUserIsAbletoLoginWithValidCredentials() throws IOException
 	{
 //		String usernameValue = "admin"; //Passing hardcoded userName value 
@@ -27,6 +28,8 @@ public class LogOutTest extends Base {
 		LogOutPage logoutpage = new LogOutPage(driver); //Creating an object of LogOutPAge Class to call the methods here.
 		logoutpage.clickOnAdmin();
 		logoutpage.clickOnLogout();
+		boolean logOut = logoutpage.isLoginPageDisplayed();
+		Assert.assertTrue(logOut);
 		
 	}
 

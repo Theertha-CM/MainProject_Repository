@@ -9,6 +9,7 @@ public class LogOutPage {
 	
 	@FindBy(xpath="//a[@data-toggle='dropdown']")WebElement admin; //Locating WebElements using PageFactory
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']")WebElement logout;
+	@FindBy(xpath="//body[@class='login-page']")WebElement loginPage;
 	
 	public WebDriver driver;
 	
@@ -30,6 +31,12 @@ public class LogOutPage {
 	{
 		
 		logout.click();
+		
+	}
+	
+	public boolean isLoginPageDisplayed()
+	{
+		return loginPage.isDisplayed();
 		
 	}
 		

@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class ManageCategoryTest extends Base {
 	
-	@Test
+	@Test(description="Manage Category Test Case")
 	public void verifyAdminIsAbleToAddCategory() throws IOException
 	{
 		
