@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageFooterPage {
 	
-	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::a[@class='small-box-footer'])[8]")WebElement manageFooterMoreInfoButton;
+//	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::a[@class='small-box-footer'])[8]")WebElement manageFooterMoreInfoButton;
 	
 	@FindBy(xpath="//i[@class='fas fa-edit']//preceding::a[@class='btn btn-sm btn btn-primary btncss']")WebElement actionButton;
 	
@@ -32,48 +32,53 @@ public class ManageFooterPage {
 		
 	}
 	
-	public void clickManageFooterMoreInfoButton()
+	/*public void clickManageFooterMoreInfoButton()
 	{
 		
 		manageFooterMoreInfoButton.click();
 		
-	}
+	}*/
 	
-	public void clickActionButton()
+	public ManageFooterPage clickActionButton()
 	{
 		
 		actionButton.click();
+		return this;
 		
 	}
 	
-	public void enterAddress(String addressValue)
+	public ManageFooterPage enterAddress(String addressValue)
 	{
 		
 		address.clear();
 		address.sendKeys(addressValue);
+		return this;
 		
 	}
 	
-	public void enterEmail(String emailValue)
+	public ManageFooterPage enterEmail(String emailValue)
 	{
 		
 		email.clear();
 		email.sendKeys(emailValue);
+		return this;
 		
 	}
 
-	public void enterPhone(String phoneValue)
+	public ManageFooterPage enterPhone(String phoneValue)
 	{
 		
 		phone.clear();
 		phone.sendKeys(phoneValue);
+		return this;
 		
 	}
 	
-	public void clickOnUpdateButton()
+	public ManageFooterPage clickOnUpdateButton()
 	{
 		
 		updateButton.click();
+		return this;
 		
 	}
 	

@@ -5,11 +5,12 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.LogOutPage;
+import constant.Constant;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
-public class LogOutTest extends Base {
+public class HomeTest extends Base {
 	
 	@Test(priority=1 , description="LogOut Test Case")
 	public void verifyTheUserIsAbletoLoginWithValidCredentials() throws IOException
@@ -25,11 +26,11 @@ public class LogOutTest extends Base {
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickonSignInButton();
 		
-		LogOutPage logoutpage = new LogOutPage(driver); //Creating an object of LogOutPAge Class to call the methods here.
+		HomePage logoutpage = new HomePage(driver); //Creating an object of LogOutPAge Class to call the methods here.
 		logoutpage.clickOnAdmin();
 		logoutpage.clickOnLogout();
 		boolean logOut = logoutpage.isLoginPageDisplayed();
-		Assert.assertTrue(logOut);
+		Assert.assertTrue(logOut, Constant.LOGOUTMSG);
 		
 	}
 

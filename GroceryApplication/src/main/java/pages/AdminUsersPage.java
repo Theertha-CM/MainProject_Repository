@@ -8,7 +8,7 @@ import utilities.PageUtility;
 
 public class AdminUsersPage {
 	
-	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::i[@class='fas fa-arrow-circle-right'])[1]")WebElement adminUsersMoreInfoButton; 
+//	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::i[@class='fas fa-arrow-circle-right'])[1]")WebElement adminUsersMoreInfoButton; 
 	
 	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newButton; 
 	
@@ -33,47 +33,52 @@ public class AdminUsersPage {
 		
 	}	
 	
-	public void clickOnAdminUsersMoreInfoButton()
+	/*public void clickOnAdminUsersMoreInfoButton()
 	{
 	
 		adminUsersMoreInfoButton.click();
 		
-	}
+	}*/
 	
-	public void clickOnNewButton()
+	public AdminUsersPage clickOnNewButton()
 	{
 	
 		newButton.click();
+		return this;
 		
 	}
 	
-	public void enterTheUserName(String randomUserName)
+	public AdminUsersPage enterTheUserName(String randomUserName)
 	{
 		
 		username.sendKeys(randomUserName);
+		return this;
 		
 	}
 	
-	public void enterThePassword(String randomPassword)
+	public AdminUsersPage enterThePassword(String randomPassword)
 	{
 		
 		password.sendKeys(randomPassword);
+		return this;
 		
 	}
 	
-	public void selectUserType(String usertypeValue)
+	public AdminUsersPage selectUserType(String usertypeValue)
 	{
 		
 		usertype.click();
 		PageUtility pageutility = new PageUtility();
-		pageutility.selectByVisibleTextMethod(usertype, usertypeValue);	
+		pageutility.selectByVisibleTextMethod(usertype, usertypeValue);
+		return this;	
 		
 	}
 	
-	public void clickSaveButton()
+	public AdminUsersPage clickSaveButton()
 	{
 		
 		saveButton.click();
+		return this;
 		
 	}
 	

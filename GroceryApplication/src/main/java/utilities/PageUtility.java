@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PageUtility {
 	
-	
+	//---------------------------Dropdown Methods-------------------------------
 	public void selectByVisibleTextMethod(WebElement elementName, String visibleText ) //To handle dropdown
 	{
 		Select select = new Select(elementName);
@@ -30,6 +31,7 @@ public class PageUtility {
 		
 	}
 	
+	//---------------------------ActionClass Methods-------------------------------
 	public void dragandDrop(WebDriver driver, WebElement dragElementName, WebElement dropElementName)
 	{
 		
@@ -74,7 +76,39 @@ public class PageUtility {
 		
 	}
 	
+	//---------------------------AlertHandling Methods-------------------------------
+	public void simpleAlert(WebDriver driver, WebElement elementName)
+	{
+		
+		elementName.click();
+		
+		Alert alert = driver.switchTo().alert();
+		alert.accept(); // To click on OK.
+		
+	}
 	
+	public void confirmationAlert(WebDriver driver, WebElement elementName)
+	{
+		
+		elementName.click();
+		
+		Alert alert = driver.switchTo().alert();	
+//		alert.accept(); // To click on OK.
+		alert.dismiss(); // To click on Cancel.
+		
+	}
+	
+	public void promptAlert(WebDriver driver, WebElement elementName, String alertValue)
+	{
+		
+		elementName.click();
+		
+		Alert alert = driver.switchTo().alert();		
+		alert.sendKeys(alertValue); // To pass values in the input field.		
+		alert.accept(); // To click on OK.
+//		alert.dismiss(); // To click on Cancel.
+		
+	}
 	
 
 }

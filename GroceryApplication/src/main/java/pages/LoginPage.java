@@ -26,28 +26,29 @@ public class LoginPage{
 	}
 
 	//All the methods defined in LoginPage Class will be invoked in LoginTest Class
-	public void enterUserName(String usernameValue)
+	public LoginPage enterUserName(String usernameValue)
 	{
 		
 		userName.sendKeys(usernameValue); 
-		//userName - WebElement name given in @FindBy Annotation, Passing the argument as usernameValue - the value is given in the method inside LoginTest.
+		return this;
 		
 	}
 	
-	public void enterPassword(String passwordValue)
+	public LoginPage enterPassword(String passwordValue)
 	{
 		
 		pwd.sendKeys(passwordValue);
-		//pwd - WebElement name given in @FindBy Annotation, Passing the argument as passwordValue - the value is given in the method inside LoginTest.
+		return this;
 		
 	}
 	
-	public void clickonSignInButton()
+	public HomePage clickonSignInButton()
 	{
 	
 		//WaitUtility waitutility = new WaitUtility();
 		//waitutility.waitForElementToBeClickable(driver, signIn);
 		signIn.click();
+		return new HomePage(driver);
 		
 	}
 	
@@ -64,10 +65,6 @@ public class LoginPage{
 		return alertmsg.isDisplayed();
 		
 	}
-//	public void dropDown()
-//	{
-//		PageUtility pageutility = new PageUtility();
-//		pageutility.selectByVisibleTextmethod(country, "India"); //For example we have given. We need to give the webElement of dropdown and the visibleText should be given accordingly.
-//	}
+
 
 }

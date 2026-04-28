@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,7 +9,7 @@ import utilities.PageUtility;
 
 public class ManageCategoryPage {
 
-	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::a[@class='small-box-footer'])[9]")WebElement manageCategoryMoreInfoButton;
+//	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::a[@class='small-box-footer'])[9]")WebElement manageCategoryMoreInfoButton;
 	
 	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newButton;
 	
@@ -36,42 +35,46 @@ public class ManageCategoryPage {
 		
 	}
 	
-	public void clickManageCategoryMoreInfoButton()
+	/*public void clickManageCategoryMoreInfoButton()
 	{
 		
 		manageCategoryMoreInfoButton.click();
 		
-	}
+	}*/
 	
-	public void clickNewButton()
+	public ManageCategoryPage clickNewButton()
 	{
 		
 		newButton.click();
+		return this;
 		
 	}
 	
-	public void enterCategory(String categoryValue)
+	public ManageCategoryPage enterCategory(String categoryValue)
 	{
 		
 		categoryField.sendKeys(categoryValue);
+		return this;
 		
 	}
 	
-	public void clickOnChooseFile(String filepath)
+	public ManageCategoryPage clickOnChooseFile(String filepath)
 	{
 		
 		chooseFile.sendKeys(filepath);
+		return this;
 		
 	}
 	
-	public void clickOnSelectTheGroups()
+	public ManageCategoryPage clickOnSelectTheGroups()
 	{
 		
 		selectGroup.click();
+		return this;
 		
 	}
 	
-	public void clickOnSaveButton()
+	public ManageCategoryPage clickOnSaveButton()
 	{
 //		Actions actions = new Actions(driver);
 //		
@@ -79,6 +82,7 @@ public class ManageCategoryPage {
 		
 
 		pageutility.singleClick(driver, saveButton);
+		return this;
 		
 	}
 	

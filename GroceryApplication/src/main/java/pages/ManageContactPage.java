@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,7 +9,7 @@ import utilities.PageUtility;
 
 public class ManageContactPage {
 	
-	@FindBy(xpath="(//a[@class='small-box-footer']//following::i[@class='fas fa-arrow-circle-right'])[3]")WebElement manageContactMoreInfoButton;
+//	@FindBy(xpath="(//a[@class='small-box-footer']//following::i[@class='fas fa-arrow-circle-right'])[3]")WebElement manageContactMoreInfoButton;
 	
 	@FindBy(xpath="//a[@role='button']")WebElement actionButton;
 	
@@ -40,69 +39,74 @@ public class ManageContactPage {
 	}
 	
 	
-	public void clickManageContactMoreInfoButton()
+	/*public void clickManageContactMoreInfoButton()
 	{
 		
 		manageContactMoreInfoButton.click();
 		
-	}
+	}*/
 	
-	public void clickActionButton()
+	public ManageContactPage clickActionButton()
 	{
 		
 		actionButton.click();
+		return this;
 		
 	}
 	
-	public void enterPhoneNumber(String phoneNumberValue)
+	public ManageContactPage enterPhoneNumber(String phoneNumberValue)
 	{
 		
 		phone.clear();
 		phone.sendKeys(phoneNumberValue);
+		return this;
 		
 	}
 	
-	public void enterEmail(String emailValue)
+	public ManageContactPage enterEmail(String emailValue)
 	{
 		
 		email.clear();
 		email.sendKeys(emailValue);
+		return this;
 		
 	}
 	
 	
-	public void enterAddress(String addressValue)
+	public ManageContactPage enterAddress(String addressValue)
 	{
 		
 		address.clear();
 		address.sendKeys(addressValue);
+		return this;
 		
 	}
 	
-	public void enterDeliveryTime(String deliveryTimeValue)
+	public ManageContactPage enterDeliveryTime(String deliveryTimeValue)
 	{
 		
 		deliveryTime.clear();
 		deliveryTime.sendKeys(deliveryTimeValue);
+		return this;
 		
 	}
 	
-	public void enterDeliveryChargeLimit(String deliveryChargeLimitValue)
+	public ManageContactPage enterDeliveryChargeLimit(String deliveryChargeLimitValue)
 	{
 		
 		deliveryChargeLimit.clear();
 		deliveryChargeLimit.sendKeys(deliveryChargeLimitValue);
+		return this;
 		
 	}
 	
-	public void clickUpdateButton()
+	public ManageContactPage clickUpdateButton()
 	{
 		//As the click() method is not working, we need to use ActionClass to perform the click operation.
-//		Actions actions = new Actions(driver);
-//		actions.moveToElement(updateButton).pause(500).click().perform(); 
 		
 	
 		pageutility.singleClick(driver, updateButton);
+		return this;
 		
 		
 	}

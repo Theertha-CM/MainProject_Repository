@@ -25,5 +25,16 @@ public static final int IMPLICITWAIT = 5;
 		wait.until(ExpectedConditions.elementToBeSelected(element));
 	}
 	
+	public void waitForElementToBeVisible(WebDriver driver, WebElement element)
+	{
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
+	    wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void waitForElementToBeInvisible(WebDriver driver, WebElement element)
+	{
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
+	    wait.until(ExpectedConditions.invisibilityOf(element));
+	}
 
 }

@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
 	
-	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::i[@class='fas fa-arrow-circle-right'])[7]")WebElement manageNews; 
+//	The below webElement is present in HomePage. So commenting it here.
+//	@FindBy(xpath="(//div[@id='sidebar-overlay']//preceding::i[@class='fas fa-arrow-circle-right'])[7]")WebElement manageNewsMoreInfoButton; 
 	
 	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newButton; 
 	
@@ -27,32 +28,36 @@ public class ManageNewsPage {
 		
 	}
 	
-	public void clickOnMoreInfoButton()
+//	The below Method is present in HomePage. So commenting it here.
+/*	public void clickOnManageNewsMoreInfoButton()
 	{
 	
 		
-		manageNews.click();
+		manageNewsMoreInfoButton.click();
 		
-	}
+	}*/
 	
-	public void clickOnNewButton()
+	public ManageNewsPage clickOnNewButton()
 	{
 	
 		newButton.click();
+		return this;
 		
 	}
 	
-	public void enterTheNews(String newsValue)
+	public ManageNewsPage enterTheNews(String newsValue)
 	{
 		
 		textArea.sendKeys(newsValue);
+		return this;
 		
 	}
 	
-	public void clickOnSaveButton()
+	public ManageNewsPage clickOnSaveButton()
 	{
 		
 		saveButton.click();
+		return this;
 		
 	}
 	

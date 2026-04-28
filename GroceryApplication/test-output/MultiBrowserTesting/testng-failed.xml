@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [MultiBrowserTesting]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Chrome"/>
+  <test thread-count="5" parallel="tests" name="Test2(failed)">
+    <classes>
+      <class name="testScript.LogOutTest">
+        <methods>
+          <include name="browserQuit"/>
+          <include name="browserInitialisation"/>
+          <include name="verifyTheUserIsAbletoLoginWithValidCredentials"/>
+        </methods>
+      </class> <!-- testScript.LogOutTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
+    <classes>
+      <class name="testScript.ManageNewsTest">
+        <methods>
+          <include name="browserQuit"/>
+          <include name="verifyTheAdminIsAbleToAddNews"/>
+          <include name="browserInitialisation"/>
+        </methods>
+      </class> <!-- testScript.ManageNewsTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [MultiBrowserTesting] -->

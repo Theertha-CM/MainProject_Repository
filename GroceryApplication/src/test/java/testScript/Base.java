@@ -1,6 +1,7 @@
 package testScript;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -8,10 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import constant.Constant;
+import utilities.ScreenShotUtility;
 import utilities.WaitUtility;
 
 public class Base {
@@ -69,13 +73,16 @@ public class Base {
 		driver.manage().window().maximize(); //To maximise the window
 	}
 	
-	//@AfterMethod(alwaysRun = true)
-	public void browserQuitandClose()
+	@AfterMethod(alwaysRun = true)
+	public void browserQuit(ITestResult iTestResult) throws IOException //ITestResult - Interface
 	{
-		//driver.close(); //Closes only the parent window.
-		driver.quit(); //Closes all the windows which are opened during execution. Useful when we uses multiple windows and tabs.
-	}
+		if (iTestResult.getStatus() == ITestResult.FAILURE) //getStatus() - Method used to get the status of test execution. If its failed, then loop is executed
+		{
+			ScreenShotUtility scrShot = new ScreenShotUtility(); // creating obj
+			scrShot.getScreenShot(driver, iTestResult.getName()); //getName() - Retrieves the name of failed test case 
+		}
 
+	}
 
 
 
