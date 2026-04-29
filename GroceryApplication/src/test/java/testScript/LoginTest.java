@@ -42,7 +42,7 @@ public class LoginTest extends Base{
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue); //Chaining two methods
 		homepage=loginpage.clickonSignInButton();
 		boolean alertmsg = loginpage.isAlertMsgDisplayed();
-		Assert.assertTrue(alertmsg, Constant.INVALIDCREDSMSG);
+		Assert.assertTrue(alertmsg, Constant.INVALIDPWDMSG);
 		
 		
 	}
@@ -57,7 +57,7 @@ public class LoginTest extends Base{
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickonSignInButton();
 		boolean alertmsg = loginpage.isAlertMsgDisplayed();
-		Assert.assertTrue(alertmsg, Constant.INVALIDCREDSMSG);
+		Assert.assertTrue(alertmsg, Constant.INVALIDUSERNAMEMSG);
 		
 	}
 	

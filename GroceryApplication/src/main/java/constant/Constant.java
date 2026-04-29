@@ -11,7 +11,9 @@ public class Constant {
 //	     -------------------------------ALERT MESSAGES--------------------------------
 		
 		public static final String VALIDCREDSMSG = "HomePage is not loading with proper credentials entered";
-		public static final String INVALIDCREDSMSG = "HomePage is loading with invalid credentials entered";
+		public static final String INVALIDPWDMSG = "HomePage is loading with invalid Password entered";
+		public static final String INVALIDUSERNAMEMSG = "HomePage is loading with invalid Username entered";
+		public static final String INVALIDCREDSMSG = "HomePage is loading with invalid Username and Password entered";
 		public static final String LOGOUTMSG = "WebPage is not getting redirected to LoginPage after LogOut";
 		public static final String MANAGENEWSMSG ="Failed to add News";
 		public static final String ADMINUSERSMSG ="Failed to add new Users with correct set of Data";

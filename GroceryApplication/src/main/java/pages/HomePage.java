@@ -86,6 +86,7 @@ public class HomePage {
 	
 	public boolean isLoginPageDisplayed()
 	{
+		
 		return loginPage.isDisplayed();
 		
 	}
